@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="tv_splash_mainTitle">
+        <item name="android:textColor">#AB15C6</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/jalnan</item>
+    </style>
+
+    <style name="tv_splash_subTitle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/one_mobile_regular</item>
+    </style>
+
+
+</resources>
