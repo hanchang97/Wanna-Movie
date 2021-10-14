@@ -18,5 +18,13 @@
         <item name="fontFamily">@font/one_mobile_regular</item>
     </style>
 
+    <style name="tv_login_title">
+        <item name="android:textColor">#A422FF</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/jalnan</item>
+    </style>
+
 
 </resources>

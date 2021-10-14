@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.LinearGradient
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -38,7 +39,7 @@ class SplashActivity: AppCompatActivity() {
     }
 
     fun startLoading(){
-       Handler().postDelayed({
+       Handler(Looper.getMainLooper()).postDelayed({
            val intent = Intent(this, LoginActivity::class.java)  // 로그인 화면으로 이동
            startActivity(intent)
            finish()  // 스플래쉬 화면은 최초 실행 시 보여줘야 하므로 finish 해주기!!
