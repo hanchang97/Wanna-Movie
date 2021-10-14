@@ -1,0 +1,46 @@
+package com.example.wannamovie.common.util
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.LinearGradient
+import android.graphics.Shader
+import android.text.TextPaint
+import android.text.style.CharacterStyle
+import android.text.style.UpdateAppearance
+import android.util.AttributeSet
+import android.widget.TextView
+import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
+import com.example.wannamovie.R
+
+// 텍스트뷰에 그라데이션 효과를 넣어주기 위한 클래스
+
+class LinearGradientSpan(
+        private val containingText: String,
+        private val textToStyle: String,
+        @ColorInt private val startColorInt: Int,
+        @ColorInt private val endColorInt: Int
+) : CharacterStyle(), UpdateAppearance {
+
+    override fun updateDrawState(tp: TextPaint?) {
+        tp ?: return
+
+        var leadingWidth = 0f
+        val indexOfTextToStyle = containingText.indexOf(textToStyle)
+        if (!containingText.startsWith(textToStyle) && containingText != textToStyle) {
+            leadingWidth = tp.measureText(containingText, 0, indexOfTextToStyle)
+        }
+        val gradientWidth = tp.measureText(containingText, indexOfTextToStyle,
+                indexOfTextToStyle + textToStyle.length)
+
+        tp.shader = LinearGradient(
+                leadingWidth,
+                0f,
+                leadingWidth + gradientWidth,
+                0f,
+                startColorInt,
+                endColorInt,
+                Shader.TileMode.REPEAT
+        )
+    }
+}

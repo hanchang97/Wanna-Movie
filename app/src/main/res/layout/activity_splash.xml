@@ -15,6 +15,13 @@
         app:layout_constraintGuide_percent="0.35"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_37"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal_45"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -45,6 +52,20 @@
         app:layout_constraintGuide_percent="0.13"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_80"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_87"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -61,7 +82,7 @@
         app:layout_constraintLeft_toRightOf="@id/guideline_vertical_13"
         app:layout_constraintRight_toLeftOf="@id/guideline_vertical_87"
         app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_45"
-        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_35"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_37"
         android:background="@drawable/splash_title_layout"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -70,14 +91,31 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="7"/>
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="86"
-            android:text="@string/title"
-            style="@style/tv_splash_mainTitle"
-            android:maxLines="1"
-            />
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:layout_weight="86">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="95"
+                android:text="@string/title"
+                style="@style/tv_splash_mainTitle"
+                android:maxLines="1"
+                />
+
+
+        </LinearLayout>
+
 
         <View
             android:layout_width="0dp"
@@ -91,9 +129,10 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_48"
         app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_52"
-        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_13"
-        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_87"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_20"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_80"
         android:text="@string/subTitle"
+        android:maxLines="1"
         style="@style/tv_splash_subTitle"/>
 
 
