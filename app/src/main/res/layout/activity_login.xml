@@ -5,6 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- guideline start -->
+
+    <!-- horizontal -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal_20"
         android:layout_width="0dp"
@@ -19,6 +21,39 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.28"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_70"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_77"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.77"/>
+    <!-- horizontal -->
+
+
+    <!-- vertical -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_80"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80"/>
+
+    <!-- vertical -->
+
 
     <!-- guideline end -->
 
@@ -30,5 +65,14 @@
         android:text="LOGIN"
         style="@style/tv_login_title"
         android:maxLines="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_20"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_80"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_70"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal_77"
+        android:text="로그인"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
