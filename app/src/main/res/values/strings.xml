@@ -3,4 +3,18 @@
 
     <string name="title">WANNA MOVIE</string>
     <string name="subTitle">당신의 영화를 보여주세요</string>
+
+
+    <string name="tv_signup_question">아직 워너무비의 회원이 아니신가요?</string>
+    <string name="tv_signup"><u>회원가입</u></string>
+
+    <string name="et_hint_regist_name">이름을 입력해주세요</string>
+    <string name="et_hint_regist_id">아이디를 입력해주세요</string>
+    <string name="et_hint_regist_pw">비밀번호를 입력해주세요</string>
+    <string name="et_hint_regist_pw_check">비밀번호를 다시 입력해주세요</string>
+    <string name="et_hint_regist_age">나이를 입력해주세요</string>
+
+    <string name="tv_signup_des">재개봉 요청하러\n가볼까요?</string>
+
+
 </resources>
