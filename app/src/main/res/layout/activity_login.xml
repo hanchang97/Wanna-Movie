@@ -22,6 +22,13 @@
         app:layout_constraintGuide_percent="0.28"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_38"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_horizontal_42"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -74,11 +81,25 @@
 
     <!-- vertical -->
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_4.44"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0444"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_15"
@@ -143,6 +164,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_95.56"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556"/>
+
     <!-- vertical -->
 
 
@@ -157,50 +185,84 @@
         style="@style/tv_login_title"
         android:maxLines="1"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_id"
+    <TextView
+        android:id="@+id/tv_id_description"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_42"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.02"
+        style="@style/tv_info_regist_description"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_38"
         app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_15"
         app:layout_constraintRight_toRightOf="@id/guideline_vertical_85"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:text="아이디"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="아이디"
-            android:inputType="textEmailAddress"/>
+    <View
+        android:id="@+id/View_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tv_id_description"/>
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_14"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_85"
+        app:layout_constraintTop_toBottomOf="@id/View_2"
+        android:maxLines="1"
+        android:hint="@string/et_hint_regist_id"
+        android:textColorHint="@color/wm_edittext_hint"
+        android:backgroundTint="#DDDDDD"
+
+        android:inputType="textEmailAddress"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        />
 
 
-    </com.google.android.material.textfield.TextInputLayout>
 
     <View
         android:id="@+id/view_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintTop_toBottomOf="@id/til_id"/>
+        app:layout_constraintHeight_percent="0.045"
+        app:layout_constraintTop_toBottomOf="@id/et_id"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_pw"
+    <TextView
+        android:id="@+id/tv_pw_description"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.02"
+        style="@style/tv_info_regist_description"
         app:layout_constraintTop_toBottomOf="@id/view_1"
         app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_15"
         app:layout_constraintRight_toRightOf="@id/guideline_vertical_85"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:text="비밀번호"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_pw"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="비밀번호"
-            android:inputType="textPassword"/>
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tv_pw_description"/>
+
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_14"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_85"
+        app:layout_constraintTop_toBottomOf="@id/view_3"
+        android:maxLines="1"
+        android:hint="@string/et_hint_regist_pw"
+        android:textColorHint="@color/wm_edittext_hint"
+        android:backgroundTint="#DDDDDD"
+
+        android:inputType="textPassword"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        />
 
 
-    </com.google.android.material.textfield.TextInputLayout>
 
 
 

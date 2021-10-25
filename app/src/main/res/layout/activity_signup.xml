@@ -374,7 +374,7 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#ACACAC"
 
-        android:enabled="false"
+
         app:shapeAppearanceOverlay="@style/btnRaduisShape"
         />
 

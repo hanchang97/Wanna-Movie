@@ -89,4 +89,10 @@ class LoginActivity: AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        binding.etId.clearFocus()
+        binding.etPw.clearFocus()
+    }
 }

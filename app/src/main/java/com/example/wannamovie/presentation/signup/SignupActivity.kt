@@ -1,11 +1,13 @@
 package com.example.wannamovie.presentation.signup
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.R
 import com.example.wannamovie.databinding.ActivitySignupBinding
+import com.example.wannamovie.presentation.welcome.WelcomeActivity
 
 class SignupActivity: AppCompatActivity() {
 
@@ -25,6 +27,12 @@ class SignupActivity: AppCompatActivity() {
         //supportActionBar!!.setTitle("회원가입")
 
 
+        // 추후에 active 버튼 클릭 시로 변경하기 / 현재 발표용으로 우선 넘어가게 설정
+        binding.btnSignupCompleteInactive.setOnClickListener {
+            Log.e("AppTest","go to welcome activity")
+            val intent = Intent(this, WelcomeActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
