@@ -9,7 +9,7 @@ import com.example.wannamovie.R
 import com.example.wannamovie.databinding.ActivitySignupBinding
 import com.example.wannamovie.presentation.welcome.WelcomeActivity
 
-class SignupActivity: AppCompatActivity() {
+class SignupStep2Activity: AppCompatActivity() {
 
     private lateinit var binding: ActivitySignupBinding
 

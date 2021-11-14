@@ -8,9 +8,8 @@ import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import com.example.wannamovie.databinding.ActivityLoginBinding
-import com.example.wannamovie.presentation.signup.SignupActivity
+import com.example.wannamovie.presentation.signup.SignupStep2Activity
 
 
 class LoginActivity: AppCompatActivity() {
@@ -85,7 +84,7 @@ class LoginActivity: AppCompatActivity() {
         // 회원가입 이동
         binding.tvGotoSignup.setOnClickListener {
             Log.e("AppTest","go to signup activity")
-            val intent = Intent(this, SignupActivity::class.java)
+            val intent = Intent(this, SignupStep2Activity::class.java)
             startActivity(intent)
         }
     }
