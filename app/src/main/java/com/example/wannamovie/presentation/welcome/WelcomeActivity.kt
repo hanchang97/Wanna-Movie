@@ -14,5 +14,8 @@ class WelcomeActivity: AppCompatActivity() {
         setContentView(binding.root)
 
 
+
+
+
     }
 }

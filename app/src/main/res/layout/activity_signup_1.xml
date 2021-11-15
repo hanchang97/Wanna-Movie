@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_4.44"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0444"/>
+
+    <!-- Tool bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_95.56"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556"/>
+
+    <!-- -->
+
+    <View
+        android:id="@+id/View_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_signup_des"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+        app:layout_constraintTop_toBottomOf="@id/View_1"
+        app:layout_constraintHeight_percent="0.08"
+        android:text="@string/tv_signup1_des"
+        style="@style/tv_signup_des"/>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_signup_des"
+        app:layout_constraintHeight_percent="0.07"/>
+
+    <!-- 아이디 성별 텍스트 -->
+    <TextView
+        android:id="@+id/tv_gender_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintTop_toBottomOf="@id/view_2"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+        android:text="성별"
+        style="@style/tv_info_regist_description"/>
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tv_gender_description"/>
+
+    <View
+        android:id="@+id/view_4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view_3"
+        app:layout_constraintDimensionRatio="360:38"/>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_man"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view_3"
+        app:layout_constraintBottom_toBottomOf="@id/view_4"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+
+        app:strokeWidth="1dp"
+        app:shapeAppearanceOverlay="@style/categoryCardViewShape"
+        app:strokeColor="#EEEEEE"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+            <!-- cardview 내부 공간을 위한 invisible text view -->
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="000"/>
+            <TextView
+                android:id="@+id/tv_man"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="남자"
+                android:maxLines="1"
+                style="@style/tv_category_unselected"/>
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="000"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <View
+        android:id="@+id/view_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/cv_man"
+        app:layout_constraintBottom_toBottomOf="@id/cv_man"
+        app:layout_constraintLeft_toRightOf="@id/cv_man"
+        app:layout_constraintWidth_percent="0.05"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/view_5"
+        app:layout_constraintBottom_toBottomOf="@id/view_5"
+        app:layout_constraintLeft_toRightOf="@id/view_5"
+
+        app:strokeWidth="1dp"
+        app:shapeAppearanceOverlay="@style/categoryCardViewShape"
+        app:strokeColor="#EEEEEE"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+            <!-- cardview 내부 공간을 위한 invisible text view -->
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="000"/>
+            <TextView
+                android:id="@+id/tv_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="여자"
+                android:maxLines="1"
+                style="@style/tv_category_unselected"/>
+            <TextView
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="000"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <View
+        android:id="@+id/view_6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cv_man"
+        app:layout_constraintHeight_percent="0.05"/>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

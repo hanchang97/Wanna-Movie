@@ -6,17 +6,17 @@ import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.R
-import com.example.wannamovie.databinding.ActivitySignupBinding
+import com.example.wannamovie.databinding.ActivitySignup2Binding
 import com.example.wannamovie.presentation.welcome.WelcomeActivity
 
 class SignupStep2Activity: AppCompatActivity() {
 
-    private lateinit var binding: ActivitySignupBinding
+    private lateinit var binding: ActivitySignup2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivitySignupBinding.inflate(layoutInflater)
+        binding = ActivitySignup2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // toolbar 설정!!
