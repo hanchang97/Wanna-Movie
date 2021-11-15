@@ -6,11 +6,27 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_3.54"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0354"/>
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_vertical_4.44"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.0444"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_95.56"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9556"/>
+
+    <!-- vertical guideline end -->
 
     <!-- Tool bar -->
     <androidx.appcompat.widget.Toolbar
@@ -19,12 +35,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_vertical_95.56"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9556"/>
+
 
     <!-- -->
 
@@ -51,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/tv_signup_des"
-        app:layout_constraintHeight_percent="0.07"/>
+        app:layout_constraintHeight_percent="0.11"/>
 
     <!-- 아이디 성별 텍스트 -->
     <TextView
@@ -179,7 +190,126 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/cv_man"
-        app:layout_constraintHeight_percent="0.05"/>
+        app:layout_constraintHeight_percent="0.07"/>
+
+    <!-- 주소 설명 텍스트 -->
+    <TextView
+        android:id="@+id/tv_address_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintTop_toBottomOf="@id/view_6"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+        android:text="지역 ( OO시 OO구/군 OO동 형태로 입력해주세요)"
+        style="@style/tv_info_regist_description"/>
+
+    <View
+        android:id="@+id/view_7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tv_address_description"/>
+
+    <EditText
+        android:id="@+id/et_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_3.54"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+        app:layout_constraintTop_toBottomOf="@id/view_7"
+        android:maxLines="1"
+        android:hint="@string/et_hint_regist_address"
+        android:textColorHint="@color/wm_edittext_hint"
+        android:backgroundTint="#DDDDDD"
+
+        android:inputType="text"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        />
+
+    <View
+        android:id="@+id/view_8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toBottomOf="@id/et_address"/>
+
+    <!-- 직업 설명 텍스트 -->
+    <TextView
+        android:id="@+id/tv_profession_des"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintTop_toBottomOf="@id/view_8"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+        android:text="직업"
+        style="@style/tv_info_regist_description"/>
+
+    <View
+        android:id="@+id/view_9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintTop_toBottomOf="@id/tv_profession_des"/>
+
+    <Spinner
+        android:id="@+id/spinner_profession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintTop_toBottomOf="@id/view_9"
+        app:layout_constraintWidth_percent="0.4"
+        android:spinnerMode="dropdown"/>
+
+    <View
+        android:id="@+id/view_10"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view_9"
+        app:layout_constraintHeight_percent="0.22"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_inactive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view_10"
+        app:layout_constraintDimensionRatio="328:52"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#ACACAC"
+
+
+        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_active"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/view_10"
+        app:layout_constraintDimensionRatio="328:52"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_vertical_4.44"
+        app:layout_constraintRight_toRightOf="@id/guideline_vertical_95.56"
+
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#A422FF"
+
+        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        android:visibility="invisible"
+        />
+
+
+
+
+
+
+
+
 
 
 

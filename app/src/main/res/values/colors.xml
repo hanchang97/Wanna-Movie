@@ -16,4 +16,7 @@
     <color name="wm_edittext_hint">#AEAEAE</color>
 
     <color name="btn_active">#A422FF</color>
+
+    <color name="cv_unselected">#EEEEEE</color>
+    <color name="tv_unselected">#4F4F4F</color>
 </resources>
