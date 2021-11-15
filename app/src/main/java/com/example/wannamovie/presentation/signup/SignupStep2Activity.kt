@@ -53,6 +53,18 @@ class SignupStep2Activity: AppCompatActivity() {
                 Toast.makeText(this, "아이디 입력 후 중복확인을 해주세요", Toast.LENGTH_SHORT).show()
         }
 
+        ///////////////
+        // 이름 입력
+
+
+
+        /////////////////////
+        // 나이 입력
+
+
+        /////////////
+        // 비밀번호 입력
+
 
         // 추후에 active 버튼 클릭 시로 변경하기 / 현재 발표용으로 우선 넘어가게 설정
         binding.btnSignupCompleteInactive.setOnClickListener {

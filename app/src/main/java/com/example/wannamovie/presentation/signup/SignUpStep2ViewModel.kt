@@ -9,7 +9,15 @@ class SignUpStep2ViewModel(
         private val getUserEmailCheckResultUseCase: UserEmailCheckUseCase
 ): ViewModel() {
 
+    var btnActive = MutableLiveData<Boolean>()  // 모든 정보 기입 완료 시 가입완료 버튼 활성화
+
     var isUserEmailExist = true  // false 여야 가입완료
+    var isNameFilled = false
+    var isAgeFilled = false
+    var isPwFilled = false
+    var isPwCheckFilled = false
+
+
 
 
     fun userEmailCheck(email: String){
@@ -25,5 +33,13 @@ class SignUpStep2ViewModel(
                     Log.e("AppTest","이메일 중복 체크 api 오류")
                 }
         )
+        btnActivateCheck()
+    }
+
+    fun btnActivateCheck(){
+        if(!isUserEmailExist && isNameFilled && isAgeFilled && isPwFilled && isPwCheckFilled)
+            btnActive.value = true
+        else
+            btnActive.value = false
     }
 }
