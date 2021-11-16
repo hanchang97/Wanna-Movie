@@ -7,6 +7,6 @@ import org.koin.dsl.module
 
 internal val viewModelModule = module {
 
-    viewModel { SignUpStep2ViewModel(get()) }
+    viewModel { SignUpStep2ViewModel(get(), get()) }
     viewModel { SignUpStep1ViewModel() }
 }

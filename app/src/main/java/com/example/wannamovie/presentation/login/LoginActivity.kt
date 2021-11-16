@@ -9,6 +9,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.databinding.ActivityLoginBinding
+import com.example.wannamovie.domain.repository.UserRepository
 import com.example.wannamovie.presentation.signup.SignUpStep1Activity
 import com.example.wannamovie.presentation.signup.SignupStep2Activity
 
@@ -88,6 +89,7 @@ class LoginActivity: AppCompatActivity() {
             val intent = Intent(this, SignUpStep1Activity::class.java)
             startActivity(intent)
         }
+
     }
 
     override fun onResume() {

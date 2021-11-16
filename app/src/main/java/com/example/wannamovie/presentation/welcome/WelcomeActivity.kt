@@ -3,6 +3,7 @@ package com.example.wannamovie.presentation.welcome
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.databinding.ActivityWelcomeBinding
 import com.example.wannamovie.presentation.login.LoginActivity
@@ -27,5 +28,9 @@ class WelcomeActivity: AppCompatActivity() {
 
 
 
+    }
+
+    override fun onBackPressed() {
+        Toast.makeText(this, "로그인 화면으로 이동하세요!", Toast.LENGTH_SHORT).show()
     }
 }

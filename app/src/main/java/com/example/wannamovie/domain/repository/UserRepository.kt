@@ -1,10 +1,13 @@
 package com.example.wannamovie.domain.repository
 
 import com.example.wannamovie.data.remote.dto.UserEmailCheckDto
+import com.example.wannamovie.data.remote.dto.UserSignUpDto
 import io.reactivex.Single
+import retrofit2.Response
 
 interface UserRepository {
     fun userEmailCheck(email: String) : Single<UserEmailCheckDto>
+    fun userSignUp(userSignUpDto: UserSignUpDto): Single<Response<Void>>
 }
 
 
