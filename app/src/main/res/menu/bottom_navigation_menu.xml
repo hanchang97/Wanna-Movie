@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/tuktalk_home"
+    <item android:id="@+id/wm_home"
         android:title="홈"
         android:icon="@drawable/ic_home_off"
         android:enabled="true"
         android:checked="true"/>
 
-    <item android:id="@+id/tuktalk_search"
+    <item android:id="@+id/wm_search"
         android:title="검색"
         android:icon="@drawable/ic_search_off"
         android:enabled="true"/>
 
 
-    <item android:id="@+id/tuktalk_mypage"
+    <item android:id="@+id/wm_mypage"
         android:title="마이페이지"
        android:icon="@drawable/ic_mypage_off"
         android:enabled="true"/>
