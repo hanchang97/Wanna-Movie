@@ -1,11 +1,9 @@
 package com.example.wannamovie.presentation.splash
 
 import android.content.Intent
-import android.graphics.LinearGradient
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.set
@@ -13,7 +11,6 @@ import androidx.core.text.toSpannable
 import com.example.wannamovie.R
 import com.example.wannamovie.common.util.LinearGradientSpan
 import com.example.wannamovie.databinding.ActivitySplashBinding
-import com.example.wannamovie.presentation.MainActivity
 import com.example.wannamovie.presentation.login.LoginActivity
 
 class SplashActivity: AppCompatActivity() {

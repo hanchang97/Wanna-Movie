@@ -1,8 +1,10 @@
 package com.example.wannamovie.data.repository
 
 import com.example.wannamovie.data.remote.UserApi
-import com.example.wannamovie.data.remote.dto.UserEmailCheckDto
-import com.example.wannamovie.data.remote.dto.UserSignUpDto
+import com.example.wannamovie.data.remote.dto.request.UserLoginRequestDto
+import com.example.wannamovie.data.remote.dto.response.UserEmailCheckDto
+import com.example.wannamovie.data.remote.dto.request.UserSignUpDto
+import com.example.wannamovie.data.remote.dto.response.UserLoginResponseDto
 import com.example.wannamovie.domain.repository.UserRepository
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -23,6 +25,10 @@ class UserRepositoryImpl(
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
 
+    override fun userLogin(userLoginRequestDto: UserLoginRequestDto): Single<Response<UserLoginResponseDto>> =
+        userApi.userLogin(userLoginRequestDto)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
 
 
 }

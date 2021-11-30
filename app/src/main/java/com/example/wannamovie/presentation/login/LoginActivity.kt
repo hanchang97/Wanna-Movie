@@ -6,18 +6,21 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.databinding.ActivityLoginBinding
 import com.example.wannamovie.domain.repository.UserRepository
+import com.example.wannamovie.presentation.main.MainActivity
 import com.example.wannamovie.presentation.signup.SignUpStep1Activity
-import com.example.wannamovie.presentation.signup.SignupStep2Activity
+import org.koin.android.viewmodel.ext.android.viewModel
+
 
 
 class LoginActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private val viewModel : LoginViewModel by viewModels()
+    private val viewModel : LoginViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +38,11 @@ class LoginActivity: AppCompatActivity() {
 
                 if(idText!!.length > 0){
                     viewModel.inputId(true)
+                    viewModel.ID = idText.toString()
                 }
                 else{
                     viewModel.inputId(false)
+                    viewModel.ID = ""
                 }
             }
 
@@ -57,9 +62,11 @@ class LoginActivity: AppCompatActivity() {
 
                 if(pwText!!.length > 0){
                     viewModel.inputPw(true)
+                    viewModel.PW = pwText.toString()
                 }
                 else{
                     viewModel.inputPw(false)
+                    viewModel.PW = ""
                 }
             }
 
@@ -90,6 +97,31 @@ class LoginActivity: AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        // 로그인 버튼 누를 시
+        binding.btnLoginActive.setOnClickListener {
+            viewModel.logIn()
+        }
+
+        // 로딩 바
+        viewModel.progressBarVisibility.observe(this, {
+            if(it)
+                binding.progressBar.visibility = View.VISIBLE
+            else
+                binding.progressBar.visibility = View.INVISIBLE
+        })
+
+        // 로그인 성공 시 처리
+        viewModel.Login_Success.observe(this, {
+            if(it){
+                Log.e("AppTest","go to main activity")
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     override fun onResume() {
