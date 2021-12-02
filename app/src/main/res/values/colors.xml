@@ -24,4 +24,17 @@
     <color name="wm_icon_unselected">#C9D1CB</color>
     <color name="wm_text_unselected">#7A7A7A</color>
 
+
+    <color name="wm_basic_content">#242428</color>
+    <color name="wm_sub_content">#333333</color>
+    <color name="wm_sub_content_2">#4F4F4F</color>
+    <color name="wm_sub_content_3">#828282</color>
+    <color name="wm_sub_content_4">#AEAEAE</color>
+    <color name="wm_sub_content_5">#BDBDBD</color>
+    <color name="wm_gray_1">#DDDDDD</color>
+    <color name="wm_gray_2">#E5E5E5</color>
+    <color name="wm_gray_3">#EEEEEE</color>
+    <color name="wm_gray_4">#F5F5F5</color>
+    <color name="wm_gray_5">#F8F8F8</color>
+
 </resources>

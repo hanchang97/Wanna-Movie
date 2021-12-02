@@ -98,9 +98,11 @@ class LoginActivity: AppCompatActivity() {
         }
 
 
-        // 로그인 버튼 누를 시
+        // 로그인 버튼 누를 시 ->
         binding.btnLoginActive.setOnClickListener {
             viewModel.logIn()
+           /* val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)*/
         }
 
         // 로딩 바

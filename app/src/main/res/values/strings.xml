@@ -31,4 +31,8 @@
 
     <string name="tv_home_banner_des">영화 재개봉 요청 서비스</string>
 
+    <string name="tv_home_age_top5">나이 Top5 재개봉 요청 영화</string>
+    <string name="tv_home_sex_top5">성별 Top5 재개봉 요청 영화</string>
+    <string name="tv_home_address_top5">지역 Top5 재개봉 요청 영화</string>
+
 </resources>

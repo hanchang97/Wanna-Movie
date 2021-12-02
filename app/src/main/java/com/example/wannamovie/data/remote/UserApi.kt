@@ -1,9 +1,10 @@
 package com.example.wannamovie.data.remote
 
 import com.example.wannamovie.data.remote.dto.request.UserLoginRequestDto
-import com.example.wannamovie.data.remote.dto.response.UserEmailCheckDto
+import com.example.wannamovie.data.remote.dto.response.user.UserEmailCheckDto
 import com.example.wannamovie.data.remote.dto.request.UserSignUpDto
-import com.example.wannamovie.data.remote.dto.response.UserLoginResponseDto
+import com.example.wannamovie.data.remote.dto.response.user.UserInfoResponseDto
+import com.example.wannamovie.data.remote.dto.response.user.UserLoginResponseDto
 import io.reactivex.Single
 import retrofit2.Response
 import retrofit2.http.*
@@ -26,4 +27,11 @@ interface UserApi {
     fun userLogin(
         @Body userdata: UserLoginRequestDto
     ):Single<Response<UserLoginResponseDto>>
+
+    //유저정보 조회
+    @GET("user/info")
+    fun getUserInfo(
+            @Header("access-token") userToken: String
+    ): Single<Response<UserInfoResponseDto>>
+
 }

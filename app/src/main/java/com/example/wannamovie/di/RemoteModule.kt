@@ -1,6 +1,7 @@
 package com.example.wannamovie.di
 
 import com.example.wannamovie.common.Constants
+import com.example.wannamovie.data.remote.HomeApi
 import com.example.wannamovie.data.remote.UserApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,12 +13,15 @@ import java.util.concurrent.TimeUnit
 
 internal val remoteModule = module {
     single { provideRetrofitBuild_Rx() }
+
     single { provideUserApi(get()) }
+    single { provideHomeApi(get()) }
 
 
 }
 
 internal fun provideUserApi(retrofit: Retrofit) : UserApi = retrofit.create(UserApi::class.java)
+internal fun provideHomeApi(retrofit: Retrofit) : HomeApi = retrofit.create(HomeApi::class.java)
 
 
 internal fun provideRetrofitBuild_Rx() = Retrofit.Builder()
