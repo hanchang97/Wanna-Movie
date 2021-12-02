@@ -81,4 +81,22 @@
         <item name="fontFamily">@font/notosans_kr_regular</item>
     </style>
 
+    <style name="tv_home_banner">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/one_mobile_regular</item>
+    </style>
+
+    <style name="tv_home_banner2">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/one_mobile_regular</item>
+    </style>
+
 </resources>

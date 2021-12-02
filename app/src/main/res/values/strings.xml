@@ -29,4 +29,6 @@
         <item>기타</item>
     </string-array>
 
+    <string name="tv_home_banner_des">영화 재개봉 요청 서비스</string>
+
 </resources>
