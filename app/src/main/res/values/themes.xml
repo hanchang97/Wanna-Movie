@@ -20,7 +20,7 @@
 
     </style>
 
-    <style name="btnRaduisShape">
+    <style name="btnRadiusShape">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
@@ -30,9 +30,20 @@
         <item name="cornerSize">50%</item>
     </style>
 
+
+    <style name="CardViewRadius8">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
+
     <style name="CardViewRadius13">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">13%</item>
+    </style>
+
+    <style name="CardViewRadius30">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30%</item>
     </style>
 
 

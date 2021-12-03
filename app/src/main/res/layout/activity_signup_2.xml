@@ -235,7 +235,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="74"
-            app:shapeAppearanceOverlay="@style/btnRaduisShape"
+            app:shapeAppearanceOverlay="@style/btnRadiusShape"
             app:strokeColor="@color/splash_color"
             app:strokeWidth="1dp">
             <LinearLayout
@@ -386,7 +386,7 @@
         android:backgroundTint="#ACACAC"
 
 
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -402,7 +402,7 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#A422FF"
 
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"
         android:visibility="invisible"
         />
 

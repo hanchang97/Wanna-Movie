@@ -1,5 +1,6 @@
 package com.example.wannamovie.presentation.main.tab.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.example.wannamovie.presentation.main.MainActivityViewModel
 import com.example.wannamovie.presentation.main.tab.home.adapter.HomeAddressRVadapter
 import com.example.wannamovie.presentation.main.tab.home.adapter.HomeAgeRVadapter
 import com.example.wannamovie.presentation.main.tab.home.adapter.HomeSexRVadapter
+import com.example.wannamovie.presentation.moviedetail.MovieDetailActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class HomeFragment: Fragment() {
@@ -83,7 +85,15 @@ class HomeFragment: Fragment() {
         ///////////////////////////////////////////////////////////////////////
 
         // 나이 top5 관련
-        rvAdapter_age = HomeAgeRVadapter(testDataSet_age)
+        rvAdapter_age = HomeAgeRVadapter(testDataSet_age,
+        selectMovie = {
+            movieId ->
+                Log.e("AppTest", "HomeFragment/ age top5 -> movie detail")
+            val intent = Intent(context, MovieDetailActivity::class.java)
+            intent.putExtra("movieId", movieId)
+            startActivity(intent)
+        })  // 영화 선택 시 상세 정보 페이지로 이동
+
         binding.rvTop5Age.layoutManager = LinearLayoutManager(context).also {
             it.orientation = LinearLayoutManager.HORIZONTAL  // 가로 방향 recyclerview
         }
@@ -111,7 +121,14 @@ class HomeFragment: Fragment() {
         ///////////////////////////////////////////////////////////////////////////////////
 
         // 성별 top5 관련
-        rvAdapter_sex = HomeSexRVadapter(testDataSet_sex)
+        rvAdapter_sex = HomeSexRVadapter(testDataSet_sex,
+                selectMovie = {
+                    movieId ->
+                    Log.e("AppTest", "HomeFragment/ sex top5 -> movie detail")
+                    val intent = Intent(context, MovieDetailActivity::class.java)
+                    intent.putExtra("movieId", movieId)
+                    startActivity(intent)
+                })
         binding.rvTop5Sex.layoutManager = LinearLayoutManager(context).also {
             it.orientation = LinearLayoutManager.HORIZONTAL  // 가로 방향 recyclerview
         }
@@ -140,7 +157,14 @@ class HomeFragment: Fragment() {
 
 
         // 지역 top5 관련
-        rvAdapter_address = HomeAddressRVadapter(testDataSet_address)
+        rvAdapter_address = HomeAddressRVadapter(testDataSet_address,
+                selectMovie = {
+                    movieId ->
+                    Log.e("AppTest", "HomeFragment/ address top5 -> movie detail")
+                    val intent = Intent(context, MovieDetailActivity::class.java)
+                    intent.putExtra("movieId", movieId)
+                    startActivity(intent)
+                })
         binding.rvTop5Address.layoutManager = LinearLayoutManager(context).also {
             it.orientation = LinearLayoutManager.HORIZONTAL  // 가로 방향 recyclerview
         }

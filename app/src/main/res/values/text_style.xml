@@ -162,4 +162,35 @@
         <item name="fontFamily">@font/notosans_kr_medium</item>
     </style>
 
+    <style name="tv_movie_detail_title">
+        <item name="android:textColor">@color/wm_basic_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/notosans_kr_bold</item>
+    </style>
+
+    <style name="tv_movie_detail_other">
+        <item name="android:textColor">@color/wm_basic_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/notosans_kr_medium</item>
+    </style>
+
+    <style name="tv_movie_detail_request_num">
+        <item name="android:textColor">@color/wm_basic_content</item>
+        <item name="autoSizeMinTextSize">2sp</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/notosans_kr_medium</item>
+    </style>
+
+
+    <style name="et_content_1">
+        <item name="android:textColor">@color/wm_sub_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/notosans_kr_medium</item>
+    </style>
+
+
 </resources>

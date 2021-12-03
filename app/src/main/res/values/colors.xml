@@ -24,6 +24,8 @@
     <color name="wm_icon_unselected">#C9D1CB</color>
     <color name="wm_text_unselected">#7A7A7A</color>
 
+    <color name="wm_primary_2">#DCAEFB</color>
+
 
     <color name="wm_basic_content">#242428</color>
     <color name="wm_sub_content">#333333</color>

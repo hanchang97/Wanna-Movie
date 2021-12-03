@@ -283,7 +283,7 @@
         android:backgroundTint="#ACACAC"
 
 
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -299,7 +299,7 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#A422FF"
 
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"
         android:visibility="invisible"
         />
 

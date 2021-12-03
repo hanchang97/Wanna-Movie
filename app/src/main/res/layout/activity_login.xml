@@ -289,7 +289,7 @@
         android:textColor="@color/white"
         android:visibility="invisible"
         android:backgroundTint="#A422FF"
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"/>
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login_inactive"
@@ -305,7 +305,7 @@
         android:enabled="false"
 
         android:backgroundTint="#ACACAC"
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"/>
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"/>
 
     <TextView
         android:layout_width="0dp"

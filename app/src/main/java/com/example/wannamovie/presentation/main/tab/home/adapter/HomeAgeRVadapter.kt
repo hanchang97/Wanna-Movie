@@ -9,7 +9,8 @@ import com.example.wannamovie.data.remote.dto.response.home.HomeMovieResponseDto
 import com.example.wannamovie.databinding.ItemHomeMovieRvBinding
 
 class HomeAgeRVadapter(
-        private var dataSet : MutableList<HomeMovieResponseDto>
+        private var dataSet : MutableList<HomeMovieResponseDto>,
+        val selectMovie:(movieId : Int) -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
     inner class MyViewHolder(val binding: ItemHomeMovieRvBinding)
@@ -43,6 +44,11 @@ class HomeAgeRVadapter(
                     .load(dataSet[position].poster_path)
                     .into(holder.binding.ivMoviePoster)
 
+
+            // 아이템 뷰 클릭 시 해당 멘토정보 페이지 이동동
+            holder.binding.root.setOnClickListener {
+                selectMovie.invoke(dataSet[position].movie_id)
+            }
         }
 
     }

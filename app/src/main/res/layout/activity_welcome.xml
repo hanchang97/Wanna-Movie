@@ -86,7 +86,7 @@
         app:layout_constraintLeft_toLeftOf="@id/gl_v_10"
         app:layout_constraintRight_toRightOf="@id/gl_v_90"
         android:text="로그인 화면으로 이동"
-        app:shapeAppearanceOverlay="@style/btnRaduisShape"
+        app:shapeAppearanceOverlay="@style/btnRadiusShape"
         android:backgroundTint="@color/btn_active"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
