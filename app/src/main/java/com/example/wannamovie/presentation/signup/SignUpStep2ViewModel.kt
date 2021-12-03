@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.wannamovie.data.remote.dto.request.UserSignUpDto
+import com.example.wannamovie.data.remote.dto.request.user.UserSignUpDto
 import com.example.wannamovie.domain.usecase.user.UserEmailCheckUseCase
 import com.example.wannamovie.domain.usecase.user.UserSignUpUseCase
 

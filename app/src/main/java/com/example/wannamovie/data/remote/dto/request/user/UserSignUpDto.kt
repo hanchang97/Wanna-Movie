@@ -1,4 +1,4 @@
-package com.example.wannamovie.data.remote.dto.request
+package com.example.wannamovie.data.remote.dto.request.user
 
 import com.google.gson.annotations.SerializedName
 

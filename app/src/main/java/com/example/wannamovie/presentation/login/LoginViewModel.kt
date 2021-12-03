@@ -5,8 +5,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.wannamovie.common.Constants
-import com.example.wannamovie.data.remote.dto.request.UserLoginRequestDto
-import com.example.wannamovie.domain.usecase.user.UserEmailCheckUseCase
+import com.example.wannamovie.data.remote.dto.request.user.UserLoginRequestDto
 import com.example.wannamovie.domain.usecase.user.UserLoginUseCase
 
 class LoginViewModel(

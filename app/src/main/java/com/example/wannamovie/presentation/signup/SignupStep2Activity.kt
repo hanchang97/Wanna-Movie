@@ -10,7 +10,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.R
-import com.example.wannamovie.data.remote.dto.request.UserSignUpDto
+import com.example.wannamovie.data.remote.dto.request.user.UserSignUpDto
 import com.example.wannamovie.databinding.ActivitySignup2Binding
 import com.example.wannamovie.presentation.welcome.WelcomeActivity
 import org.koin.android.viewmodel.ext.android.viewModel
