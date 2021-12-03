@@ -17,7 +17,7 @@ internal val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
     viewModel { MainActivityViewModel() }
     viewModel { HomeViewModel(get(), get())}
-    viewModel { MovieDetailViewModel(get(), get()) }
-    viewModel { MovieCommentViewModel(get()) }
+    viewModel { MovieDetailViewModel(get(), get(), get()) }
+    viewModel { MovieCommentViewModel(get(), get()) }
 
 }

@@ -8,4 +8,6 @@ object Constants2 {
     var USER_AGE = 0
     var USER_SEX = ""
     var USER_ADDRESS = ""
+
+    var USER_ROLE = ""
 }

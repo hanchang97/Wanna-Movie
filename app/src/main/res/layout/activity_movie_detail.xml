@@ -288,7 +288,7 @@
         app:layout_constraintLeft_toLeftOf="@id/gl_v_4.44"
         app:layout_constraintRight_toRightOf="@id/gl_v_95.56"
 
-        android:text="댓글보기"
+        android:text="댓글 쓰기"
         android:textColor="@color/wm_primary"
         android:backgroundTint="@color/white"
         app:strokeColor="@color/wm_primary"

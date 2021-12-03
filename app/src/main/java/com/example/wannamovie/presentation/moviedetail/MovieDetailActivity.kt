@@ -42,12 +42,13 @@ class MovieDetailActivity: AppCompatActivity() {
 
         // 선택한 영화 id 받기
         MOVIE_ID = intent.getIntExtra("movieId", 0)
-        Log.e("AppTest", "선택한 영화 id : ${MOVIE_ID}")
+        Log.e("AppTest", "MovieDetailActivity/ 선택한 영화 id : ${MOVIE_ID}")
         //////////////////////////////////////////////////////////////////
 
 
-        // 영화 id로 상세페이지 조회하기
+        // 영화 id로 상세페이지 조회하기, 조회수 증가
         viewModel.getMovieDetailInfo(MOVIE_ID)
+        viewModel.increaseMovieVisit(MOVIE_ID)
         ////////////////////////////////////////////////////////////////
 
         viewModel.progressbarVisbility.observe(this, {
@@ -108,6 +109,8 @@ class MovieDetailActivity: AppCompatActivity() {
 
                 // 코멘트 내용 보내서 요청 통신하기
                 viewModel.requestMovie(MOVIE_ID, REQUEST_COMMENT)
+
+                binding.etRequestComment.text.clear() // 내용 없어지는게 깔끔해 보임
             }
         }
 
@@ -138,6 +141,7 @@ class MovieDetailActivity: AppCompatActivity() {
         binding.btnWriteMovieComment.setOnClickListener {
             Log.e("AppTest", "MovieDetail -> MovieComment  btn clicked")
             val intent = Intent(this, MovieCommentActivity::class.java)
+            intent.putExtra("movieId", MOVIE_ID)
             startActivity(intent)
         }
 

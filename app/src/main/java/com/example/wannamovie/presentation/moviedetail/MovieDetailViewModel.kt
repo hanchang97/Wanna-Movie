@@ -6,12 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.wannamovie.common.Constants
 import com.example.wannamovie.data.remote.dto.request.search.SearchRequestMovieResquestDto
+import com.example.wannamovie.domain.usecase.search.IncreaseMovieVisitUseCase
 import com.example.wannamovie.domain.usecase.search.RequestMovieUseCase
 import com.example.wannamovie.domain.usecase.search.SearchMovieDetailUseCase
 
 class MovieDetailViewModel(
         private val searchMovieDetailUseCase: SearchMovieDetailUseCase,
-        private val requestMovieUseCase: RequestMovieUseCase
+        private val requestMovieUseCase: RequestMovieUseCase,
+        private val increaseMovieVisitUseCase: IncreaseMovieVisitUseCase
 ): ViewModel() {
 
     var IsGetMovieDetailSuccess = MutableLiveData<Boolean>()
@@ -99,7 +101,26 @@ class MovieDetailViewModel(
                 }
         )
 
+    }
 
 
+    // 상세정보 열람 영화 조회수 증가
+    @SuppressLint("CheckResult")
+    fun increaseMovieVisit(movie_id: Int){
+
+        increaseMovieVisitUseCase.increaseMovieVisit(movie_id).subscribe(
+                {
+                    if(it.code() == 200){
+                        Log.e("AppTest", "MovieDetailViewModel/ 현재 영화 id : ${movie_id}  조회수 증가 성공")
+                    }
+                    else{
+                        Log.e("AppTest", "MovieDetailViewModel/ 조회수 증가 실패, code : ${it.code()}")
+                    }
+                },
+                {
+                    throwable ->
+                    Log.e("AppTest","MovieDetailViewModel/ 조회수 증가 오류")
+                }
+        )
     }
 }

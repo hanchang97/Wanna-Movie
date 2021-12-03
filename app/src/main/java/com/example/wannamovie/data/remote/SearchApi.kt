@@ -1,6 +1,7 @@
 package com.example.wannamovie.data.remote
 
 import com.example.wannamovie.data.remote.dto.request.search.SearchRequestMovieResquestDto
+import com.example.wannamovie.data.remote.dto.request.search.WriteCommentResquestDto
 import com.example.wannamovie.data.remote.dto.response.home.MovieWrapper
 import com.example.wannamovie.data.remote.dto.response.search.MovieDetailResponseDto
 import com.example.wannamovie.data.remote.dto.response.search.SearchRequestMovieResponseDto
@@ -24,4 +25,19 @@ interface SearchApi {
             @Header("access-token") userToken: String,
             @Body requestData : SearchRequestMovieResquestDto
     ) : Single<Response<Void>>
+
+
+    // 댓글 작성하기
+    @POST("request")
+    fun writeComment(
+            @Header("access-token") userToken: String,
+            @Body requestData : WriteCommentResquestDto
+    ) : Single<Response<Void>>
+
+    // 영화 조회수 증가
+    @PUT("movie/{movie_id}")
+    fun increaseMovieVisit(
+            @Path("movie_id") movie_id: Int
+    ) : Single<Response<Void>>
+
 }

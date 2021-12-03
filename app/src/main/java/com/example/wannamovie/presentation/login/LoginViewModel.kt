@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.wannamovie.common.Constants
+import com.example.wannamovie.common.Constants2
 import com.example.wannamovie.data.remote.dto.request.user.UserLoginRequestDto
 import com.example.wannamovie.domain.usecase.user.UserLoginUseCase
 
@@ -56,7 +57,10 @@ class LoginViewModel(
                     Log.e("AppTest","로그인 성공")
 
                     Constants.USER_TOKEN = it.body()!!.token
-                    Log.e("AppTest","유저 토큰 : ${Constants.USER_TOKEN}")
+                    Constants2.USER_ROLE = it.body()!!.role
+
+                    Log.e("AppTest","유저 토큰 : ${Constants.USER_TOKEN},\n" +
+                            "유저 역할 : ${Constants2.USER_ROLE}")
 
                     Login_Success.value = true
                 }
