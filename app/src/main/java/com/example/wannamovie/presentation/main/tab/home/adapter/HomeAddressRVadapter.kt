@@ -45,7 +45,7 @@ class HomeAddressRVadapter(
                     .into(holder.binding.ivMoviePoster)
 
 
-            // 아이템 뷰 클릭 시 해당 멘토정보 페이지 이동동
+            // 아이템 뷰 클릭 시 해당 영화 상세 정보 페이지 이동
             holder.binding.root.setOnClickListener {
                 selectMovie.invoke(dataSet[position].movie_id)
             }

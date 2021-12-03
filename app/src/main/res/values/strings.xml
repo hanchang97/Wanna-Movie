@@ -29,6 +29,12 @@
         <item>기타</item>
     </string-array>
 
+    <string-array name="keywordType_dataList">
+        <item>제목검색</item>
+        <item>감독검색</item>
+        <item>장르검색</item>
+    </string-array>
+
     <string name="tv_home_banner_des">영화 재개봉 요청 서비스</string>
 
     <string name="tv_home_age_top5">나이 Top5 재개봉 요청 영화</string>

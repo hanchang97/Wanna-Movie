@@ -4,6 +4,7 @@ import com.example.wannamovie.data.remote.dto.request.search.SearchRequestMovieR
 import com.example.wannamovie.data.remote.dto.request.search.WriteCommentResquestDto
 import com.example.wannamovie.data.remote.dto.response.home.MovieWrapper
 import com.example.wannamovie.data.remote.dto.response.search.MovieDetailResponseDto
+import com.example.wannamovie.data.remote.dto.response.search.SearchMovie
 import com.example.wannamovie.data.remote.dto.response.search.SearchRequestMovieResponseDto
 import com.example.wannamovie.data.remote.dto.response.user.UserInfoResponseDto
 import io.reactivex.Single
@@ -39,5 +40,13 @@ interface SearchApi {
     fun increaseMovieVisit(
             @Path("movie_id") movie_id: Int
     ) : Single<Response<Void>>
+
+
+    // 영화 검색
+    @GET("movie-list")
+    fun searchMovie(
+            @QueryMap keyWordMap: Map<String, String>,
+            @QueryMap pageMap : Map<String, Int>
+    ) : Single<Response<SearchMovie>>
 
 }

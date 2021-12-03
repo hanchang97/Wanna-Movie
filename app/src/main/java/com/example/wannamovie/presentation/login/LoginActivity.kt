@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.wannamovie.common.Constants2
 import com.example.wannamovie.databinding.ActivityLoginBinding
 import com.example.wannamovie.domain.repository.UserRepository
 import com.example.wannamovie.presentation.main.MainActivity
@@ -116,9 +117,16 @@ class LoginActivity: AppCompatActivity() {
         // 로그인 성공 시 처리
         viewModel.Login_Success.observe(this, {
             if(it){
-                Log.e("AppTest","go to main activity")
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                if(Constants2.USER_ROLE.equals("user")){  // 일반 유저 페이지 이동
+                    Log.e("AppTest","role : ${Constants2.USER_ROLE}/go to main activity")
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
+                else{
+                    // 관리자 페이지 이동
+                    Log.e("AppTest","role : ${Constants2.USER_ROLE}/ go to admin activity")
+
+                }
             }
             else{
                 Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()

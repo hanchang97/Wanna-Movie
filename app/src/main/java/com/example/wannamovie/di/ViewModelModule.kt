@@ -3,6 +3,7 @@ package com.example.wannamovie.di
 import com.example.wannamovie.presentation.login.LoginViewModel
 import com.example.wannamovie.presentation.main.MainActivityViewModel
 import com.example.wannamovie.presentation.main.tab.home.HomeViewModel
+import com.example.wannamovie.presentation.main.tab.search.SearchViewModel
 import com.example.wannamovie.presentation.moviedetail.MovieDetailViewModel
 import com.example.wannamovie.presentation.moviedetail.commentpage.MovieCommentViewModel
 import com.example.wannamovie.presentation.signup.SignUpStep1ViewModel
@@ -19,5 +20,6 @@ internal val viewModelModule = module {
     viewModel { HomeViewModel(get(), get())}
     viewModel { MovieDetailViewModel(get(), get(), get()) }
     viewModel { MovieCommentViewModel(get(), get()) }
+    viewModel { SearchViewModel(get()) }
 
 }

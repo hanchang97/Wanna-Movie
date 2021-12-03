@@ -18,5 +18,5 @@ data class MovieDetailResponseDto(
         @SerializedName("request_count")
         val request_count : Int,
         @SerializedName("is_request")
-        val is_request : Boolean,
+        val is_request : Boolean
 )
