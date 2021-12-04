@@ -35,6 +35,51 @@
         <item>장르검색</item>
     </string-array>
 
+    <string-array name="datacount_dataList">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+
+
+    <string-array name="keywordType_admin">
+        <item>나이</item>
+        <item>성별</item>
+        <item>지역</item>
+    </string-array>
+
+    <string-array name="keywordType_admin_age">
+        <item>10대</item>
+        <item>20대</item>
+        <item>30대</item>
+        <item>40대</item>
+        <item>50대</item>
+        <item>60대</item>
+        <item>70대</item>
+    </string-array>
+
+    <string-array name="keywordType_admin_sex">
+        <item>남성</item>
+        <item>여성</item>
+    </string-array>
+
+    <string-array name="keywordType_admin_address">
+        <item>강남구</item>
+        <item>관악구</item>
+        <item>서대문구</item>
+        <item>동작구</item>
+    </string-array>
+
+
+
     <string name="tv_home_banner_des">영화 재개봉 요청 서비스</string>
 
     <string name="tv_home_age_top5">나이 Top5 재개봉 요청 영화</string>

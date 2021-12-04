@@ -206,13 +206,20 @@
                 android:layout_weight="16"/>
         </LinearLayout>
 
+        <View
+            android:id="@+id/view_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_goto_userinfo"
+            app:layout_constraintDimensionRatio="360:5"
+            android:background="@color/wm_gray_4"/>
 
 
         <LinearLayout
             android:id="@+id/ll_goto_reopening_list"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/ll_goto_userinfo"
+            app:layout_constraintTop_toBottomOf="@id/view_line_1"
             app:layout_constraintDimensionRatio="360:46"
             android:orientation="horizontal"
             android:weightSum="360">
@@ -249,54 +256,14 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:id="@+id/ll_goto_admin"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/view_9"
-            app:layout_constraintDimensionRatio="360:46"
-            android:orientation="horizontal"
-            android:weightSum="360">
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="16"/>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="328"
-                android:orientation="vertical"
-                android:weightSum="46">
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="12"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="22"
-                    android:text="관리자 모드"
-                    style="@style/tv_mypage_small_title"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="12"/>
-            </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="16"/>
-        </LinearLayout>
 
         <View
-            android:id="@+id/view_9"
+            android:id="@+id/view_line_2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="360:16"
-            android:background="@color/wm_gray_5"/>
-
+            app:layout_constraintTop_toBottomOf="@id/ll_goto_reopening_list"
+            app:layout_constraintDimensionRatio="360:5"
+            android:background="@color/wm_gray_4"/>
 
 
 

@@ -29,7 +29,7 @@ interface SearchApi {
 
 
     // 댓글 작성하기
-    @POST("request")
+    @POST("comments")
     fun writeComment(
             @Header("access-token") userToken: String,
             @Body requestData : WriteCommentResquestDto
@@ -48,5 +48,8 @@ interface SearchApi {
             @QueryMap keyWordMap: Map<String, String>,
             @QueryMap pageMap : Map<String, Int>
     ) : Single<Response<SearchMovie>>
+
+
+
 
 }

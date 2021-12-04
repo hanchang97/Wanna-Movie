@@ -38,6 +38,13 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".presentation.moviedetail.commentpage.MovieCommentActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".presentation.admin.AdminActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".presentation.main.tab.mypage.reopenlist.ViewReopenMovieListActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

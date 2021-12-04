@@ -1,8 +1,10 @@
 package com.example.wannamovie.di
 
+import com.example.wannamovie.presentation.admin.AdminViewModel
 import com.example.wannamovie.presentation.login.LoginViewModel
 import com.example.wannamovie.presentation.main.MainActivityViewModel
 import com.example.wannamovie.presentation.main.tab.home.HomeViewModel
+import com.example.wannamovie.presentation.main.tab.mypage.reopenlist.ViewReopenViewModel
 import com.example.wannamovie.presentation.main.tab.search.SearchViewModel
 import com.example.wannamovie.presentation.moviedetail.MovieDetailViewModel
 import com.example.wannamovie.presentation.moviedetail.commentpage.MovieCommentViewModel
@@ -21,5 +23,8 @@ internal val viewModelModule = module {
     viewModel { MovieDetailViewModel(get(), get(), get()) }
     viewModel { MovieCommentViewModel(get(), get()) }
     viewModel { SearchViewModel(get()) }
+
+    viewModel { AdminViewModel(get(), get()) }
+    viewModel { ViewReopenViewModel(get()) }
 
 }

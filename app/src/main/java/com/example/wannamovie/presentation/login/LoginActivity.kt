@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.wannamovie.common.Constants2
 import com.example.wannamovie.databinding.ActivityLoginBinding
 import com.example.wannamovie.domain.repository.UserRepository
+import com.example.wannamovie.presentation.admin.AdminActivity
 import com.example.wannamovie.presentation.main.MainActivity
 import com.example.wannamovie.presentation.signup.SignUpStep1Activity
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -114,7 +115,8 @@ class LoginActivity: AppCompatActivity() {
                 binding.progressBar.visibility = View.INVISIBLE
         })
 
-        // 로그인 성공 시 처리
+
+        // 로그인 성공 시 -> 유저 역할에 따른 페이지 분기 처리
         viewModel.Login_Success.observe(this, {
             if(it){
                 if(Constants2.USER_ROLE.equals("user")){  // 일반 유저 페이지 이동
@@ -125,7 +127,8 @@ class LoginActivity: AppCompatActivity() {
                 else{
                     // 관리자 페이지 이동
                     Log.e("AppTest","role : ${Constants2.USER_ROLE}/ go to admin activity")
-
+                    val intent = Intent(this, AdminActivity::class.java)
+                    startActivity(intent)
                 }
             }
             else{

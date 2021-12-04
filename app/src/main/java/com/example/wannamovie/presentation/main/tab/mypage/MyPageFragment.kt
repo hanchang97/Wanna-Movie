@@ -14,6 +14,7 @@ import com.example.wannamovie.databinding.FragmentHomeBinding
 import com.example.wannamovie.databinding.FragmentMypageBinding
 import com.example.wannamovie.presentation.main.MainActivityViewModel
 import com.example.wannamovie.presentation.main.tab.mypage.info.MyInfoActivity
+import com.example.wannamovie.presentation.main.tab.mypage.reopenlist.ViewReopenMovieListActivity
 import org.koin.android.viewmodel.ext.android.sharedViewModel
 
 class MyPageFragment: Fragment() {
@@ -45,6 +46,14 @@ class MyPageFragment: Fragment() {
         binding.llGotoUserinfo.setOnClickListener {
             Log.e("AppTest","MyPageFragment/ go to myinfo activity")
             val intent = Intent(context, MyInfoActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // 재개봉 확정 리스트로 이동
+        binding.llGotoReopeningList.setOnClickListener {
+            Log.e("AppTest","MyPageFragment/ go to view reopen movie list activity")
+            val intent = Intent(context, ViewReopenMovieListActivity::class.java)
             startActivity(intent)
         }
 

@@ -63,7 +63,7 @@ class SearchViewModel(
                     }
                     else{
                         Log.e("AppTest","SearchViewModel/ 영화 검색 실패")
-                        IsSearchMovieSuccess.value = true
+                        IsSearchMovieSuccess.value = false
                     }
 
                     progressbarVisibility.value = false
@@ -71,7 +71,7 @@ class SearchViewModel(
                 {
                     throwable ->
                     Log.e("AppTest","SearchViewModel/ 영화 검색 오류")
-                    IsSearchMovieSuccess.value = true
+                    IsSearchMovieSuccess.value = false
                     progressbarVisibility.value = false
                 }
         )

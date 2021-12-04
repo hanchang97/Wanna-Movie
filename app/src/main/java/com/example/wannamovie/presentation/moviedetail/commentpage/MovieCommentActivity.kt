@@ -133,7 +133,6 @@ class MovieCommentActivity: AppCompatActivity() {
 
     }
 
-
     // toolbar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){

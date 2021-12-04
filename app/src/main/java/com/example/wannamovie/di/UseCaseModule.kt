@@ -1,5 +1,8 @@
 package com.example.wannamovie.di
 
+import com.example.wannamovie.domain.usecase.admin.AdminGetMovieListUseCase
+import com.example.wannamovie.domain.usecase.admin.AdminReopenMovieUseCase
+import com.example.wannamovie.domain.usecase.admin.GetReopenMovieListUseCase
 import com.example.wannamovie.domain.usecase.home.HomeGetMovieListUseCase
 import com.example.wannamovie.domain.usecase.search.*
 import com.example.wannamovie.domain.usecase.user.UserEmailCheckUseCase
@@ -22,4 +25,9 @@ internal val useCaseModule = module {
     factory { WriteCommentUseCase(get()) }
     factory { IncreaseMovieVisitUseCase(get()) }
     factory { SearchMovieUseCase(get()) }
+
+    factory { AdminGetMovieListUseCase(get()) }
+    factory { AdminReopenMovieUseCase(get()) }
+
+    factory { GetReopenMovieListUseCase(get()) }
 }
