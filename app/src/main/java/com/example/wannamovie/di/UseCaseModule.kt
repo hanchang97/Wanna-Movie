@@ -30,4 +30,5 @@ internal val useCaseModule = module {
     factory { AdminReopenMovieUseCase(get()) }
 
     factory { GetReopenMovieListUseCase(get()) }
+    factory { GetMyRequestListUseCase(get()) }
 }

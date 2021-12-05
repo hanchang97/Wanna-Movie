@@ -21,6 +21,7 @@ class ViewReopenViewModel(
     @SuppressLint("CheckResult")
     fun getReopenMovieList(){
         progressbarVisibility.value = true
+        ReopenMovieList.clear()
 
         getReopenMovieListUseCase.getReopenMovieList().subscribe(
                 {

@@ -4,6 +4,7 @@ import com.example.wannamovie.data.remote.dto.request.search.SearchRequestMovieR
 import com.example.wannamovie.data.remote.dto.request.search.WriteCommentResquestDto
 import com.example.wannamovie.data.remote.dto.response.home.MovieWrapper
 import com.example.wannamovie.data.remote.dto.response.search.MovieDetailResponseDto
+import com.example.wannamovie.data.remote.dto.response.search.MyRequestListWrappper
 import com.example.wannamovie.data.remote.dto.response.search.SearchMovie
 import com.example.wannamovie.data.remote.dto.response.search.SearchRequestMovieResponseDto
 import com.example.wannamovie.data.remote.dto.response.user.UserInfoResponseDto
@@ -48,6 +49,13 @@ interface SearchApi {
             @QueryMap keyWordMap: Map<String, String>,
             @QueryMap pageMap : Map<String, Int>
     ) : Single<Response<SearchMovie>>
+    
+    
+    // 내가 요청한 영화 리스트 조회
+    @GET("request")
+    fun getMyRequestList(
+            @Header("access-token") userToken: String
+    ) : Single<Response<MyRequestListWrappper>>
 
 
 

@@ -44,6 +44,8 @@
 
         <activity android:name=".presentation.main.tab.mypage.reopenlist.ViewReopenMovieListActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".presentation.main.tab.mypage.myrequest.MyRequestListActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

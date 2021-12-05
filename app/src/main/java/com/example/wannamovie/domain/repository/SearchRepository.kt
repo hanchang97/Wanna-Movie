@@ -3,6 +3,7 @@ package com.example.wannamovie.domain.repository
 import com.example.wannamovie.data.remote.dto.request.search.SearchRequestMovieResquestDto
 import com.example.wannamovie.data.remote.dto.request.search.WriteCommentResquestDto
 import com.example.wannamovie.data.remote.dto.response.search.MovieDetailResponseDto
+import com.example.wannamovie.data.remote.dto.response.search.MyRequestListWrappper
 import com.example.wannamovie.data.remote.dto.response.search.SearchMovie
 import com.example.wannamovie.data.remote.dto.response.search.SearchRequestMovieResponseDto
 import io.reactivex.Single
@@ -24,6 +25,9 @@ interface SearchRepository {
 
     //  영화 검색
     fun searchMovie(keywordMap : Map<String, String>, pageMap: Map<String, Int> ): Single<Response<SearchMovie>>
+
+    // 내가 요청한 리스트 가져오기
+    fun getMyRequestList(userToken: String) : Single<Response<MyRequestListWrappper>>
 
 }
 
